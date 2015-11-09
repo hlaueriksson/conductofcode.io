@@ -17,3 +17,7 @@ google_analytics_tracking_id: UA-39767110-6
 markdown: kramdown
 timezone: Europe/Stockholm
 permalink: /post/:title/
+
+gems:
+  - jekyll-sitemap
+ 
