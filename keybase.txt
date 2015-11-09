@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/hlaueriksson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://conductofcode.io
+  * I am hlaueriksson (https://keybase.io/hlaueriksson) on keybase.
+  * I have a public key with fingerprint 2392 198E 2F9F 0DCE 23E4  E4BB FE46 F6EB C904 46CD
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101ae6b2fe8e05f0af141efe9ee212dbab01b208523d88238803ca075379dd8cbdc0a",
+            "fingerprint": "2392198e2f9f0dce23e4e4bbfe46f6ebc90446cd",
+            "host": "keybase.io",
+            "key_id": "fe46f6ebc90446cd",
+            "kid": "0101ae6b2fe8e05f0af141efe9ee212dbab01b208523d88238803ca075379dd8cbdc0a",
+            "uid": "5105af379087f9e07b54cb1cb800d700",
+            "username": "hlaueriksson"
+        },
+        "service": {
+            "hostname": "conductofcode.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1447081659,
+    "expire_in": 157680000,
+    "prev": "55285508a6b4cca381ea0515872387f66e0b3e49ae0c61911adf5a6afce87915",
+    "seqno": 16,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.47
+Comment: https://keybase.io/crypto
+
+yMIpAnicrVJbSBRRGN6tVFopulhmEdRQgWJ2zuxcF4LtLpqFUUEaLeec+WedtJl1
+Z3bTRF+kh+xNosuDSFCQkSGBaYmpWSgUJQhBEEGWZSnZS/TQ9YzYW489Hc75v+/7
+v+8//6MlCwOhYI+x/UrpgrNrgk+G2lOBo9G7fQ0CdYx6IdIgVMPcATUGuF6s2jKE
+iIAwwgQUKpqgAZJNREwsYTBBBxCxaFBCEaYi0mQxbGiaGNY0FGYEqXJY1Q1DY9Rg
+iAiFgmnZcUgmkpbtcVkxrItY10A0dRMZDMQwSCBRaoKkmApQpiNJUpjBiVWO6zO4
+OUpcKLIc/sYvsTl7/8D/Z9+pOTkZI5mYvIQ01dQBqVSWGMWMaggZKkI+0IWkTU4B
+R1fVkBQkrWrXdWyhsVDglbTFwB+un2YexRzbSDHPMZljzOdKJB3PYU6Nr+F5iYhP
+9uoTPvo00Ni8ToxatsHHyQlpSLoWbxLBHMk8yxfGkqQiDSuyXihAXcJKQszyEbKq
+cLcI+W0g7YeSRU2WkUYUKjFGwhoGgmQsayofh2oqCiDK/0UngJiCdYyJYcpEISYD
+TdWxLPjJam2HayvcJ4lzTdeK28RLJUFofDh4fFEgGApkZizw9ywQWrzs7/blf8v6
+lb882F/Z1T022lt+srZhoGLF4YnQBnr7WN7uLxkF6W3nLr54O1Uy8rzgzuzCmV/P
+ptHatolAtKrs50BlX2f7utaDw625T6ZHp1+7n3dNVUX3PXt0+ubmiXc19oP1ecqe
+sp17hTxzMDN78E3GYDDx4F5qaryteM9kzsf+HRX7W860TB4rKS54f/1G17YtH75s
+TU2uun+tO1uCE8Pdrfdndp+/0GSn676u/r0yHc48fjV9q3mo5/vefjG7r+MpFPzY
+1Hj5yKqGhzeLRwvXdoagvC3QfLtoLP4qp7+pNDJ+6e3mlyOdLcOfKh93lEcP5ee+
+mB1b0d37bulsVu3h6HTZiQPxM0uCG/8Ab19Ecw==
+=oCYp
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hlaueriksson
+
+==================================================================
