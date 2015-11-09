@@ -12,3 +12,5 @@ portfolio_text: "henrik.laueriksson.com"
 
 # Build settings
 markdown: kramdown
+timezone: Europe/Stockholm
+permalink: /post/:title/
