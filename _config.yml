@@ -10,6 +10,9 @@ github_username:  hlaueriksson
 portfolio_url: "http://henrik.laueriksson.com"
 portfolio_text: "henrik.laueriksson.com"
 
+# Google Analytics
+google_analytics_tracking_id: UA-39767110-6
+
 # Build settings
 markdown: kramdown
 timezone: Europe/Stockholm
