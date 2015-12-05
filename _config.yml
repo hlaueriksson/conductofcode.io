@@ -20,4 +20,4 @@ permalink: /post/:title/
 
 gems:
   - jekyll-sitemap
- 
+  - jekyll-gist
