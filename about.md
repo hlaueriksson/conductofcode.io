@@ -5,8 +5,8 @@ permalink: /about/
 display_in_navigation: true
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My name is [Henrik Lau Eriksson](http://henrik.laueriksson.com). I live in Stockholm, Sweden.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I work at [Valtech](https://valtech.se) as a technical consultant. I am a programmer with focus on [.NET](https://github.com/dotnet) and the web.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+This blog is one of tools I intend to use in my journey to become a better programmer. I write about the things I learn along the way.
