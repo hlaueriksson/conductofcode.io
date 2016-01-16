@@ -17,7 +17,7 @@ Run the following commands in a command prompt as *administrator*.
 
 Install [Ruby](https://chocolatey.org/packages/ruby):
 
-{% highlight Plain Text %}
+{% highlight bat %}
 choco install ruby
 {% endhighlight %}
 
@@ -25,13 +25,13 @@ choco install ruby
 
 Install [Ruby DevKit](https://chocolatey.org/packages/ruby2.devkit):
 
-{% highlight Plain Text %}
+{% highlight bat %}
 choco install ruby2.devkit
 {% endhighlight %}
 
 This resulted in errors for me:
 
-{% highlight Plain Text %}
+{% highlight bat %}
  Downloading ruby2.devkit 64 bit
    from 'http://cdn.rubyinstaller.org/archives/devkits/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe'
  Hashes match.
@@ -81,13 +81,13 @@ I edited the `config.yml` file to look like this:
 
 Install Jekyll:
 
-{% highlight Plain Text %}
+{% highlight bat %}
 gem install jekyll
 {% endhighlight %}
 
 Install *optional* Jekyll plugins:
 
-{% highlight Plain Text %}
+{% highlight bat %}
 gem install jekyll-sitemap
 gem install jekyll-gist
 {% endhighlight %}
