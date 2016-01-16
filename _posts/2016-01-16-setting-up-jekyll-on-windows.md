@@ -17,7 +17,7 @@ Run the following commands in a command prompt as *administrator*.
 
 Install [Ruby](https://chocolatey.org/packages/ruby):
 
-{% highlight Windows batch files %}
+{% highlight Plain Text %}
 choco install ruby
 {% endhighlight %}
 
@@ -25,7 +25,7 @@ choco install ruby
 
 Install [Ruby DevKit](https://chocolatey.org/packages/ruby2.devkit):
 
-{% highlight Windows batch files %}
+{% highlight Plain Text %}
 choco install ruby2.devkit
 {% endhighlight %}
 
@@ -81,13 +81,13 @@ I edited the `config.yml` file to look like this:
 
 Install Jekyll:
 
-{% highlight Windows batch files %}
+{% highlight Plain Text %}
 gem install jekyll
 {% endhighlight %}
 
 Install *optional* Jekyll plugins:
 
-{% highlight Windows batch files %}
+{% highlight Plain Text %}
 gem install jekyll-sitemap
 gem install jekyll-gist
 {% endhighlight %}
