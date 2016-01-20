@@ -7,6 +7,8 @@ url: "http://conductofcode.io" # the base hostname & protocol for your site
 twitter_username: hlaueriksson
 github_username:  hlaueriksson
 
+author: "Henrik Lau Eriksson"
+
 portfolio_url: "http://henrik.laueriksson.com"
 portfolio_text: "henrik.laueriksson.com"
 
@@ -17,6 +19,14 @@ google_analytics_tracking_id: UA-39767110-6
 markdown: kramdown
 timezone: Europe/Stockholm
 permalink: /post/:title/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      is_post: true
 
 gems:
   - jekyll-sitemap
