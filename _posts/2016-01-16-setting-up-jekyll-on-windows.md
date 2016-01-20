@@ -4,7 +4,10 @@ title: Setting up Jekyll on Windows
 date: 2016-01-16 20:50:00
 update: 2016-01-20 23:10:00
 tags: Jekyll, Blogging
-image: gem-install-jekyll.png
+image:
+ path: gem-install-jekyll.png
+ width: 1103
+ height: 643
 ---
 
 This is how I installed Jekyll (3.0.1) on **Windows 10**.

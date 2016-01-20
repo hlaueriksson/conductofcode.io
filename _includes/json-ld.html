@@ -11,8 +11,8 @@
     "@id": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
     "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
     "mainEntityOfPage": {
-      "@type":"WebPage",
-      "@id":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+      "@type": "{{ type }}",
+      "@id": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
     },
     "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
     "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}",
@@ -23,15 +23,26 @@
     "dateModified": "{{ page.update | date_to_xmlschema }}",
   {% endif %}
   {% if page.image %}
-    "image": "{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.image }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.image.path }}",
+      "height": {{ page.image.height }},
+      "width": {{ page.image.width }}
+  },
   {% endif %}
     "author": {
       "@type": "Person",
       "name": "{{ site.author }}"
     },
     "publisher": {
-      "@type": "Person",
-      "name": "{{ site.author }}"
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.gravatar_url }}",
+        "width": 60,
+        "height": 60
+      }
     }
   }
   </script>
