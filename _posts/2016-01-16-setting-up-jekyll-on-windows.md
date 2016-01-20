@@ -2,7 +2,9 @@
 layout: post
 title: Setting up Jekyll on Windows
 date: 2016-01-16 20:50:00
+update: 2016-01-20 23:10:00
 tags: Jekyll, Blogging
+image: gem-install-jekyll.png
 ---
 
 This is how I installed Jekyll (3.0.1) on **Windows 10**.
@@ -91,6 +93,8 @@ Install *optional* Jekyll plugins:
 gem install jekyll-sitemap
 gem install jekyll-gist
 {% endhighlight %}
+
+![gem install jekyll](gem-install-jekyll.png)
 
 ## Troubleshooting
 
