@@ -2,6 +2,7 @@
 layout: post
 title: Social meta tags with Jekyll
 date: 2016-03-30 21:00:00
+update: 2016-03-30 23:00:00
 tags: Jekyll, Blogging
 image:
  path: meta.png
