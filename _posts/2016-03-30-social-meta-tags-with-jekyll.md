@@ -16,7 +16,7 @@ You can browse the repo at [https://github.com/hlaueriksson/conductofcode.io](ht
 
 The tags should differ somewhat for pages and posts on the blog. To be able to distinguish between *posts vs pages* I updated `_config.yml` with:
 
-{% gist hlaueriksson/4384d76d06aa7bcd1be0f6de1aa88593 %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 _config.yml %}
 
 {% raw %}
 Then I can check for posts with `{% if page.is_post %}`
@@ -24,7 +24,7 @@ Then I can check for posts with `{% if page.is_post %}`
 
 Sharing on social media improves with *images*. I added support for specifying an image in the front matter for a page/post:
 
-{% gist hlaueriksson/5c1c4a9aaf9957a129cf0f972b7e1c43 %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 front-matter.txt %}
 
 I place the images for a page/post in a folder that correspond with the *permalink*, i.e. `\post\social-meta-tags-with-jekyll\meta.png`
 
@@ -32,11 +32,11 @@ I place the images for a page/post in a folder that correspond with the *permali
 
 Facebook uses the [Open Graph protocol](http://ogp.me/) and it looks like this:
 
-{% gist hlaueriksson/b14fabb773c4e083a17a17977e066113 %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 facebook.html %}
 
 The Jekyll include file to generate that:
 
-{% gist hlaueriksson/31461a63225fc8b8826e579e7051ee7b %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 includes-og.html %}
 
 It will end up like this:
 
@@ -50,11 +50,11 @@ Test your markup with:
 
 Twitter uses [Twitter Cards](https://dev.twitter.com/cards/overview) and it looks like this:
 
-{% gist hlaueriksson/f78be2c1116dda5ffb192e5df775df8e %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 twitter.html %}
 
 The Jekyll include file to generate that:
 
-{% gist hlaueriksson/7b1bd5c4878eb215afa7ec82dd11a030 %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 includes-twitter.html %}
 
 It will end up like this:
 
@@ -68,13 +68,13 @@ Test your markup with:
 
 Google+ uses [structured data](http://schema.org/) and it can look like this:
 
-{% gist hlaueriksson/3658242672cddea63692be976c6b6a42 %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 google.html %}
 
 I prefer to use **JSON-LD** over RDFa and Microdata, because it does not force you change any existing markup.
 
 The Jekyll include file to generate that:
 
-{% gist hlaueriksson/92ffb886c90708fe4129ba36a73df62c %}
+{% gist hlaueriksson/8139a924cdfaa95a6384df99201dfd89 includes-json-ld.html %}
 
 It will end up like this:
 

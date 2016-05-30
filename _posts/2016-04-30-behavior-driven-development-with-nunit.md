@@ -45,11 +45,11 @@ You can get the example code at [https://github.com/hlaueriksson/ConductOfCode](
 
 The subject:
 
-{% gist hlaueriksson/b473232e485cb82b38939a8ba861c577 %}
+{% gist hlaueriksson/f95ff2ef7e0c4ce234400b6727b9c94f HelloWorld.cs %}
 
 The tests:
 
-{% gist hlaueriksson/507c0defd3fa4fe6449247cf8e1a7a64 %}
+{% gist hlaueriksson/f95ff2ef7e0c4ce234400b6727b9c94f When_GetMessage.cs %}
 
 The solution explorer:
 

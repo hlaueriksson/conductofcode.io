@@ -30,7 +30,7 @@ Update these files with your own content:
 
 My configuration ended up like this:
 
-{% gist hlaueriksson/ba2318c1a3f6ce57dd2e %}
+{% gist hlaueriksson/ba2318c1a3f6ce57dd2e _config.yml %}
 
 I added Google Analytics and changed the [permalinks](https://jekyllrb.com/docs/permalinks/) to my liking.
 
