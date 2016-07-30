@@ -11,7 +11,8 @@ image:
 
 What BDD frameworks for .NET / C# are actively maintained? Let's try some of them out!
 
-https://twitter.com/hlaueriksson/status/757489145073770496
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What <a href="https://twitter.com/hashtag/BDD?src=hash">#BDD</a> frameworks for <a href="https://twitter.com/hashtag/dotnet?src=hash">#dotnet</a> / <a href="https://twitter.com/hashtag/csharp?src=hash">#csharp</a> are missing from <a href="https://twitter.com/dwozn">@dwozn</a> list at <a href="https://t.co/Ad1i9bU2Zs">https://t.co/Ad1i9bU2Zs</a></p>&mdash; Henrik Lau Eriksson (@hlaueriksson) <a href="https://twitter.com/hlaueriksson/status/757489145073770496">July 25, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I will try actively maintained projects that:
 
