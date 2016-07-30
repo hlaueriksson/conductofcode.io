@@ -42,6 +42,8 @@ Frameworks for **Specification by example**:
 
 I'll use ReSharper as my testrunner when it's possible.
 
+You can view the code at [https://github.com/hlaueriksson/ConductOfCode](https://github.com/hlaueriksson/ConductOfCode)
+
 ## The subject
 
 The stack, a last-in-first-out (LIFO) collection:
@@ -111,6 +113,8 @@ SCENARIO: [Not empty] Non empty stack
   SCENARIO RESULT: Passed after 17ms
 {% endhighlight %}
 
+View the commit on GitHub: [513f0fce52ce63073fe662f9a1279b879399d99d](https://github.com/hlaueriksson/ConductOfCode/commit/513f0fce52ce63073fe662f9a1279b879399d99d)
+
 ## Machine.Specifications (MSpec)
 
 * Dependencies: -
@@ -120,6 +124,8 @@ SCENARIO: [Not empty] Non empty stack
 {% gist hlaueriksson/d742e784fbc25babdb9059f5d3c41516 MSpec-StackSpecs.cs %}
 
 ![Machine.Specifications (MSpec)](MSpec.png)
+
+View the commit on GitHub: [217e02c329bb8590e3aade6f5d0ff44d1ba14e6e](https://github.com/hlaueriksson/ConductOfCode/commit/217e02c329bb8590e3aade6f5d0ff44d1ba14e6e)
 
 ## NSpec
 
@@ -135,6 +141,8 @@ Run the specs from the console:
 
 ![NSpec](NSpec.png)
 
+View the commit on GitHub: [dc8a8b5f65128a3a95920911cb0af60fdfd7c3a1](https://github.com/hlaueriksson/ConductOfCode/commit/dc8a8b5f65128a3a95920911cb0af60fdfd7c3a1)
+
 ## SpecsFor
 
 * Dependencies: NUnit
@@ -145,6 +153,8 @@ Run the specs from the console:
 
 ![SpecsFor](SpecsFor.png)
 
+View the commit on GitHub: [96057b2d794d54dba98ed17c09ae26b3b91f37af](https://github.com/hlaueriksson/ConductOfCode/commit/96057b2d794d54dba98ed17c09ae26b3b91f37af)
+
 ## xBehave.net
 
 * Dependencies: xUnit
@@ -154,6 +164,8 @@ Run the specs from the console:
 {% gist hlaueriksson/d742e784fbc25babdb9059f5d3c41516 Xbehave-StackFeature.cs %}
 
 ![xBehave.net](Xbehave.png)
+
+View the commit on GitHub: [a11c641a66d284d3ef508358e371475e4056a339](https://github.com/hlaueriksson/ConductOfCode/commit/a11c641a66d284d3ef508358e371475e4056a339)
 
 ## Concordion.NET
 
@@ -177,6 +189,8 @@ Output is written to your temp folder:
 
 ![Concordion.NET](Concordion2.png)
 
+View the commit on GitHub: [33631d54be3986b6263d7a22fd2888513a920ea6](https://github.com/hlaueriksson/ConductOfCode/commit/33631d54be3986b6263d7a22fd2888513a920ea6)
+
 ## SpecFlow
 
 * Dependencies: NUnit &#124; xUnit &#124; MsTest
@@ -188,6 +202,8 @@ Output is written to your temp folder:
 {% gist hlaueriksson/d742e784fbc25babdb9059f5d3c41516 SpecFlow-StackSteps.cs %}
 
 ![SpecFlow](SpecFlow.png)
+
+View the commit on GitHub: [3c468931d7eb71e0fff2840200a25f67f5a0d273](https://github.com/hlaueriksson/ConductOfCode/commit/3c468931d7eb71e0fff2840200a25f67f5a0d273)
 
 ## Popularity
 
