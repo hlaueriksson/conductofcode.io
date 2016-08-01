@@ -2,6 +2,7 @@
 layout: post
 title: Automocked base class for NUnit tests
 date: 2016-05-30 21:00:00
+update: 2016-08-01 23:00:00
 tags: NUnit, Testing, C#
 image:
  path: vs.png
@@ -49,6 +50,10 @@ WithSubject:
 {% gist hlaueriksson/ffd7e5b3f6b9074d4643e57e4f3f7ae5 WithSubject.cs %}
 
 The `With<TFake>()` methods can be used to inject real or fake objects to the subject.
+
+The subject:
+
+{% gist hlaueriksson/ffd7e5b3f6b9074d4643e57e4f3f7ae5 HelloWorld.cs %}
 
 The tests:
 
