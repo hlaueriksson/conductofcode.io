@@ -2,6 +2,7 @@
 layout: post
 title: BDD frameworks for .NET / C#
 date: 2016-07-30 20:00:00
+update: 2016-08-01 18:00:00
 tags: BDD, Testing, C#
 image:
  path: unit-test-sessions.png
@@ -25,7 +26,7 @@ I group the frameworks into two categories:
 * Behavior-driven development (BDD)
 	* Specifications written and read by *developers*.
 * Specification by example (SBE)
-	* Specifications written and read *developers*, *testers* and *business analysts* (Three Amigos).
+	* Specifications written and read by *developers*, *testers* and *business analysts* (Three Amigos).
 
 Frameworks for **Behavior-driven development**:
 
