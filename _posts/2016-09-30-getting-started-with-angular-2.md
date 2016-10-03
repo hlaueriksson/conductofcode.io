@@ -2,6 +2,7 @@
 layout: post
 title: Getting started with Angular 2
 date: 2016-09-30 10:00:00
+update: 2016-10-03 09:00:00
 tags: Angular 2, TypeScript
 image:
  path: visual-studio-code.png
@@ -39,7 +40,7 @@ Angular 2 apps consists of:
 * HTML
 * CSS
 
-I'm using [Visual Studio Code](https://code.visualstudio.com) as my editor. Is does a good job with TypeScript, HTML and CSS.
+I'm using [Visual Studio Code](https://code.visualstudio.com) as my editor. It does a good job with TypeScript, HTML and CSS.
 
 ## Angular-CLI
 
@@ -94,7 +95,7 @@ After the scaffolding, the actual coding began...
 Random thoughts:
 
 * The TypeScript syntax take some time to get used to. I like that it's type safe. C# developers should feel more at home with TypeScript than with JavaScript.
-* The development server runs with a file watch. Just save the file you are working on in the editor, and the browser reloads. This is awesome!
+* The development server runs with a file watch. Just save the file you are working on in the editor. The code is then transpiled and bundled. The browser reloads automatically. This is awesome!
 * Specs end up in the same folder as the production code. It makes it easy to navigate the editor. 
 * Components can have their own CSS files. This makes styling very modular.
 * Refactoring support in Visual Studio Code is lacking.
