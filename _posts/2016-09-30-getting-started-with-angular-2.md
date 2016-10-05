@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Angular 2
 date: 2016-09-30 10:00:00
-update: 2016-10-03 09:00:00
+update: 2016-10-05 14:00:00
 tags: Angular 2, TypeScript
 image:
  path: visual-studio-code.png
@@ -48,7 +48,7 @@ To make Angular 2 development less painful, use the Angular-CLI tool.
 
 Read the docs at: [https://github.com/angular/angular-cli](https://github.com/angular/angular-cli)
 
-With Angular-CLI you don't need a build script. No need for Gulp or Grunt any more!
+With Angular-CLI you don't need a build script or a task manager. No need for Gulp or Grunt any more!
 
 Here follows the account of what I did to write my CV app...
 
