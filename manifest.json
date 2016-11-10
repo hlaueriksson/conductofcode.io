@@ -1,0 +1,16 @@
+{
+  "name": "Conduct of Code",
+  "description": "Henrik Lau Eriksson on the conduct of code",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#fdfdfd",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
