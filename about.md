@@ -7,6 +7,6 @@ display_in_navigation: true
 
 My name is [Henrik Lau Eriksson](http://henrik.laueriksson.com). I live in Stockholm, Sweden.
 
-I work at [Movestic](https://www.movestic.se) as a developer. I am a programmer with focus on [.NET](https://github.com/dotnet) and the web.
+I work at [Qliro](https://www.qliro.com) as a developer. I am a programmer with focus on [.NET](https://github.com/dotnet) and the web.
 
 This blog is one of the tools I intend to use in my journey to become a better programmer. I write about the things I learn along the way.
