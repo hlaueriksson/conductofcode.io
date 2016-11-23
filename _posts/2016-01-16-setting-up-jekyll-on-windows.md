@@ -3,7 +3,9 @@ layout: post
 title: Setting up Jekyll on Windows
 date: 2016-01-16 20:50:00
 update: 2016-01-20 23:10:00
-tags: Jekyll, Blogging
+tags:
+ - Jekyll
+ - Blogging
 image:
  path: gem-install-jekyll.png
  width: 1103

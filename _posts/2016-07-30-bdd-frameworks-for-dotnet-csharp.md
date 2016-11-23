@@ -3,7 +3,10 @@ layout: post
 title: BDD frameworks for .NET / C#
 date: 2016-07-30 20:00:00
 update: 2016-08-01 18:00:00
-tags: BDD, Testing, C#
+tags:
+ - BDD
+ - Testing
+ - C#
 image:
  path: unit-test-sessions.png
  width: 1920

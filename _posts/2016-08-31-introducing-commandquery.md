@@ -2,7 +2,11 @@
 layout: post
 title: Introducing CommandQuery
 date: 2016-08-31 20:00:00
-tags: CQS, Microservices, ASP.NET Core, C#
+tags:
+ - CQS
+ - Microservices
+ - ASP.NET Core
+ - C#
 image:
  path: CommandQuery.png
  width: 1920

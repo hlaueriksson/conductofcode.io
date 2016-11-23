@@ -2,7 +2,11 @@
 layout: post
 title: Behavior-driven development with NUnit
 date: 2016-04-30 20:00:00
-tags: BDD, NUnit, Testing, C#
+tags:
+ - BDD
+ - NUnit
+ - Testing
+ - C#
 image:
  path: vs.png
  width: 1920

@@ -2,7 +2,9 @@
 layout: post
 title: Getting started with React
 date: 2016-10-31 13:00:00
-tags: React, JavaScript
+tags:
+ - React
+ - JavaScript
 image:
  path: visual-studio-code.png
  width: 2880
