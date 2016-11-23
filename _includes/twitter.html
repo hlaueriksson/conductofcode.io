@@ -1,9 +1,14 @@
-<!-- https://dev.twitter.com/cards/overview -->
+{% if page.image.path contains "http://" or page.image.path contains "https://" %}
+  {% assign image = page.image.path %}
+{% elsif page.image %}
+  {% assign image = page.url | prepend: site.baseurl | prepend: site.url | append: page.image.path %}
+{% endif %}
+  <!-- https://dev.twitter.com/cards/overview -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.twitter_username }}" />
   <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}" />
-  {% if page.image %}
-  <meta name="twitter:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.image.path }}" />
-  {% endif %}
+{% if image %}
+  <meta name="twitter:image" content="{{ image }}" />
+{% endif %}

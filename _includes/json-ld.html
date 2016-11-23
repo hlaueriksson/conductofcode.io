@@ -3,6 +3,11 @@
 {% else %}
   {% assign type = "Blog" %}
 {% endif %}
+{% if page.image.path contains "http://" or page.image.path contains "https://" %}
+  {% assign image = page.image.path %}
+{% elsif page.image %}
+  {% assign image = page.url | prepend: site.baseurl | prepend: site.url | append: page.image.path %}
+{% endif %}
   <!-- http://schema.org/ -->
   <script type="application/ld+json">
   {
@@ -16,20 +21,20 @@
     },
     "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
     "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}",
-  {% if page.date %}
+{% if page.date %}
     "datePublished": "{{ page.date | date_to_xmlschema }}",
-  {% endif %}
-  {% if page.update %}
+{% endif %}
+{% if page.update %}
     "dateModified": "{{ page.update | date_to_xmlschema }}",
-  {% endif %}
-  {% if page.image %}
+{% endif %}
+{% if image %}
     "image": {
       "@type": "ImageObject",
-      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.image.path }}",
+      "url": "{{ image }}",
       "width": {{ page.image.width }},
       "height": {{ page.image.height }}
-  },
-  {% endif %}
+    },
+{% endif %}
     "author": {
       "@type": "Person",
       "name": "{{ site.author }}"
