@@ -2,6 +2,7 @@
 layout: post
 title: Entities and Value Objects in C# for DDD
 date: 2016-11-30 22:00:00
+update: 2016-12-31 12:00:00
 tags:
  - DDD
  - C#
@@ -11,7 +12,7 @@ image:
  height: 1048
 ---
 
-Last week I went to a [meetup](https://www.meetup.com/Swenug-Stockholm/events/235235223/) arranged by Swenug about DDD. I got reminded of concept behind Entities and Value Objects and the code that we wrote at my previous job.
+Last week I went to a [meetup](https://www.meetup.com/Swenug-Stockholm/events/235235223/) arranged by Swenug about DDD. I got reminded of the concept behind Entities and Value Objects and the code that we wrote at my previous job.
 
 The scope of this post is to focus on constructors, validation and the protection of the domain.
 
