@@ -2,7 +2,7 @@
 layout: post
 title: BDD frameworks for .NET / C#
 date: 2016-07-30 20:00:00
-update: 2016-08-01 18:00:00
+update: 2017-01-06 22:00:00
 tags:
  - BDD
  - Testing
@@ -119,6 +119,14 @@ SCENARIO: [Not empty] Non empty stack
 
 View the commit on GitHub: [513f0fce52ce63073fe662f9a1279b879399d99d](https://github.com/hlaueriksson/ConductOfCode/commit/513f0fce52ce63073fe662f9a1279b879399d99d)
 
+HTML reports can be enabled with configuration:
+
+{% gist hlaueriksson/d742e784fbc25babdb9059f5d3c41516 app.config %}
+
+[![LightBDD](LightBDD2.png)](FeaturesSummary.html)
+
+Thanks [Wojtek](https://github.com/Suremaker) for the [Pull Request](https://github.com/hlaueriksson/ConductOfCode/pull/1)
+
 ## Machine.Specifications (MSpec)
 
 * Dependencies: -
@@ -191,7 +199,7 @@ Output is written to your temp folder:
 
 `C:\Users\<username>\AppData\Local\Temp\ConductOfCode\Concordion`
 
-![Concordion.NET](Concordion2.png)
+[![Concordion.NET](Concordion2.png)](Stack.html)
 
 View the commit on GitHub: [33631d54be3986b6263d7a22fd2888513a920ea6](https://github.com/hlaueriksson/ConductOfCode/commit/33631d54be3986b6263d7a22fd2888513a920ea6)
 
