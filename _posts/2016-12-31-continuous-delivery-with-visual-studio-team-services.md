@@ -2,6 +2,7 @@
 layout: post
 title: Continuous Delivery with Visual Studio Team Services
 date: 2016-12-31 12:00:00
+update: 2017-01-28 14:00:00
 tags:
  - Continuous Delivery
  - VSTS
@@ -52,6 +53,8 @@ At work I have been using products from different vendors to do the same thing:
 Let's set up a DevOps pipeline with VSTS, Azure, Continuous Integration and Continuous Delivery.
 
 ## yo vsts
+
+**Update:** The `yo vsts` project is no longer maintained. It has been superseded by [yo Team](https://github.com/DarqueWarrior/generator-team), that handles both VSTS and TFS.
 
 `yo vsts` is a Yeoman generator that creates a complete CI/CD pipeline in VSTS from the command line.
 
@@ -118,7 +121,7 @@ Release to Dev is done automatically after a push, but releases to QA and Prod n
 
 ![VSTS Release Approval](vsts-release-approval.png)
 
-When releases to to all environments are done:
+When releases to all environments are done:
 
 ![VSTS Release Summary](vsts-release-summary.png)
 
