@@ -1,0 +1,183 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ConductOfCode",
+		"_postman_id": "a08723bd-07cb-47b8-4e01-51a4fe3a6c5c",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"description": "Folder for api",
+			"item": [
+				{
+					"name": "http://localhost:50480/api/Authentication/Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"Authorization\", jsonData.token_type + \" \" + jsonData.access_token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:50480/api/Authentication/Token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/Count",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/Count",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/Clear",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/Clear",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/Contains",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/Contains",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"value\": \"item\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/Peek",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/Peek",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/Pop",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/Pop",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/Push",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/Push",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"value\": \"item\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:50480/api/Stack/ToArray",
+					"request": {
+						"url": "http://localhost:50480/api/Stack/ToArray",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

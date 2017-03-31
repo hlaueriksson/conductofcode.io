@@ -1,0 +1,275 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "ConductOfCode"
+    },
+    "basePath": "localhost:50480/",
+    "paths": {
+        "/api/Authentication/Token": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "operationId": "ApiAuthenticationTokenPost",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "application/json-patch+json"
+                ],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/TokenRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/TokenResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Stack/Count": {
+            "get": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackCountGet",
+                "consumes": [],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Stack/Clear": {
+            "delete": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackClearDelete",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Stack/Contains": {
+            "post": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackContainsPost",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "application/json-patch+json"
+                ],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "item",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Item"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Stack/Peek": {
+            "get": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackPeekGet",
+                "consumes": [],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Item"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Stack/Pop": {
+            "get": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackPopGet",
+                "consumes": [],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Item"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Stack/Push": {
+            "post": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackPushPost",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "application/json-patch+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "item",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Item"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Stack/ToArray": {
+            "get": {
+                "tags": [
+                    "Stack"
+                ],
+                "operationId": "ApiStackToArrayGet",
+                "consumes": [],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Item"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "TokenRequest": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "TokenResponse": {
+            "type": "object",
+            "properties": {
+                "token_type": {
+                    "type": "string"
+                },
+                "access_token": {
+                    "type": "string"
+                },
+                "expires_in": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            }
+        },
+        "Item": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string"
+                }
+            }
+        },
+        "Error": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {}
+}
