@@ -2,6 +2,7 @@
 layout: post
 title: Secure and explore ASP.NET Core Web APIs
 date: 2017-03-31 21:00:00
+update: 2017-04-01 20:00:00
 tags:
  - JWT
  - Swagger
@@ -52,11 +53,11 @@ The `TokenOptions` class is the type safe representation of the configuration in
 
 {% gist hlaueriksson/0144c69bb6c78a8ecb8a8874a7aa1a29 TokenOptions.cs %}
 
-* The `Type` default to `Bearer`, which is the schema used by JWT.
+* The `Type` defaults to `Bearer`, which is the schema used by JWT.
 
 * The expiration of the tokens defaults to one hour.
 
-The `TokenOptions` will be used used in two places in the codebase. Therefor I have placed some convenience methods in `TokenOptionsExtensions`:
+The `TokenOptions` will be used in two places in the codebase. Therefor I extracted some convenience methods into `TokenOptionsExtensions`:
 
 {% gist hlaueriksson/0144c69bb6c78a8ecb8a8874a7aa1a29 TokenOptionsExtensions.cs %}
 
@@ -76,7 +77,7 @@ ConfigureServices:
 
 * The `AddOptions` method adds services required for using options.
 
-* The `Configure<TokenOptions>` method registers a configuration instance which `TokenOptions` will bind against. The `TokenOptions` from `appsettings.json` will be accessible.
+* The `Configure<TokenOptions>` method registers a configuration instance which `TokenOptions` will bind against. The `TokenOptions` from `appsettings.json` will be accessible and available for dependency injection.
 
 * The `AddSwaggerGen` method registers the Swagger generator.
 
@@ -88,7 +89,7 @@ Configure:
 
 * The `InjectOnCompleteJavaScript` method injects JavaScript to invoke when the Swagger UI has successfully loaded. I will get back to this later.
 
-* The `UseStaticFiles` method enables static file serving. The injected JavaScript for the Swagger UI is served from `wwwroot` folder.
+* The `UseStaticFiles` method enables static file serving. The injected JavaScript for the Swagger UI is served from the `wwwroot` folder.
 
 * The `UseJwtBearerAuthentication` method adds JWT bearer token middleware to the web application pipeline.
 `Audience` and `Issuer` will be used to validate the tokens.
@@ -176,11 +177,11 @@ There are two approaches.
 Inject the script to Swagger UI in `Startup.cs`:
 
 {% highlight cs %}
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConductOfCode");
-                c.InjectOnCompleteJavaScript("/swagger-ui/authorization1.js");
-            });
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConductOfCode");
+    c.InjectOnCompleteJavaScript("/swagger-ui/authorization1.js");
+});
 {% endhighlight %}
 
 The result looks like this:
@@ -188,6 +189,8 @@ The result looks like this:
 ![authorization1.js](swagger-ui-authorization1.png)
 
 * Enter a username and password, click the *Get token* button to set the authorization header
+
+* The *Get token* button only needs to be clicked once per page load
 
 ### authorization2.js
 
@@ -204,12 +207,12 @@ The result looks like this:
 Inject the scripts to Swagger UI in `Startup.cs`:
 
 {% highlight cs %}
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConductOfCode");
-                c.InjectOnCompleteJavaScript("https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"); // https://cdnjs.com/libraries/crypto-js
-                c.InjectOnCompleteJavaScript("/swagger-ui/authorization2.js");
-            });
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConductOfCode");
+    c.InjectOnCompleteJavaScript("https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"); // https://cdnjs.com/libraries/crypto-js
+    c.InjectOnCompleteJavaScript("/swagger-ui/authorization2.js");
+});
 {% endhighlight %}
 
 * The `crypto-js` script is injected from a CDN.
@@ -248,11 +251,13 @@ Add some JavaScript in the **Tests** tab:
 ![Tests](postman-tests.png)
 
 {% highlight js %}
-var jsonData = JSON.parse(responseBody);
-postman.setGlobalVariable("Authorization", jsonData.token_type + " " + jsonData.access_token);
+var data = JSON.parse(responseBody);
+postman.setGlobalVariable("Authorization", data.token_type + " " + data.access_token);
 {% endhighlight %}
 
 * When the response is returned, the access_token is stored in the global variable `Authorization`
+
+* The request to the `Token` action only needs to be sent once per token lifetime (one hour)
 
 Add Authorization to all actions in the **Headers** tab:
 
@@ -304,9 +309,9 @@ authorize();
 
 * The JavaScript is accessed from the global variable `authorize` and evaluated.
 
-* The function `authorize` is executed and the token is generated
+* The function `authorize` is executed and the token is generated.
 
-The `StackController` actions should now return responses with status codes `200`
+The `StackController` actions should now return responses with status codes `200`.
 
 The collection can be exported:
 
