@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "latest-functions",
+		"_postman_id": "59f9347d-ebaf-3168-b3b4-40b8745d810a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://latest-functions.azurewebsites.net/api/query/BlogQuery",
+			"request": {
+				"url": "http://latest-functions.azurewebsites.net/api/query/BlogQuery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://latest-functions.azurewebsites.net/api/query/GitHubQuery",
+			"request": {
+				"url": "http://latest-functions.azurewebsites.net/api/query/GitHubQuery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Username\": \"hlaueriksson\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://latest-functions.azurewebsites.net/api/query/InstagramQuery",
+			"request": {
+				"url": "http://latest-functions.azurewebsites.net/api/query/InstagramQuery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7071/api/query/BlogQuery",
+			"request": {
+				"url": "http://localhost:7071/api/query/BlogQuery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7071/api/query/GitHubQuery",
+			"request": {
+				"url": "http://localhost:7071/api/query/GitHubQuery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Username\": \"hlaueriksson\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7071/api/query/InstagramQuery",
+			"request": {
+				"url": "http://localhost:7071/api/query/InstagramQuery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
