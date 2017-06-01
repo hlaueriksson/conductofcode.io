@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a JAMstack site with Hugo and Azure Functions
-date: 2017-05-31 22:00:00
+date: 2017-05-31 20:00:00
 tags:
  - Hugo
  - Azure
