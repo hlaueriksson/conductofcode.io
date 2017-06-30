@@ -2,6 +2,7 @@
 layout: post
 title: Building a JAMstack site with Hugo and Azure Functions
 date: 2017-05-31 20:00:00
+update: 2017-06-30 12:00:00
 tags:
  - Hugo
  - Azure
@@ -18,6 +19,11 @@ Modern web development architecture:
 This blog post covers:
 
 > Hugo + jQuery + Azure Functions = JAMstack
+
+This blog post is part of a series:
+
+1. Building a JAMstack site with Hugo and Azure Functions (this post)
+2. [Managing content for a JAMstack site with Netlify CMS]({% post_url 2017-06-30-managing-content-for-a-jamstack-site-with-netlify-cms %})
 
 ![JAMstack Recipes](jamstack-recipes.png)
 
