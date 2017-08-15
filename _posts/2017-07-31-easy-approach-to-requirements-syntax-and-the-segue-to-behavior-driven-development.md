@@ -2,6 +2,7 @@
 layout: post
 title: Easy Approach to Requirements Syntax and the segue to Behavior Driven Development
 date: 2017-07-31 20:00:00
+update: 2017-08-15 12:00:00
 tags:
  - Requirements
  - SpecFlow
@@ -58,7 +59,7 @@ They identified eight major problems with writing requirements in an unstructure
 > * Inappropriate implementation (statements of how the system should be built, rather than what it should do).
 > * Untestability (requirements that cannot be proven true or false when the system is implemented).
 
-To overcome or reduce the effects for these problems they came up with a ruleset with five simple templates.
+To overcome or reduce the effects of these problems they came up with a ruleset with five simple templates.
 
 Requirements are divided into five types:
 
@@ -88,7 +89,7 @@ Requirements are divided into five types:
 
 > Where `<feature is included>`, the `<system name>` shall `<system response>`
 
-## Stack<T> Class
+## The Stack Class
 
 Let's put this to the test with the [`Stack<T>` Class](https://msdn.microsoft.com/en-us/library/3278tedw(v=vs.110).aspx) as the example.
 
@@ -150,7 +151,7 @@ Let's take this to the next level with BDD and SpecFlow.
 
 {% gist hlaueriksson/3bd543bc6466e3eb5ecd1ab87d952563 Stack.feature %}
 
-* Each requirement is an own scenario
+* Each requirement has its own scenario
 * I've tagged the scenarios with the type of requirement for clarity
 
 {% gist hlaueriksson/3bd543bc6466e3eb5ecd1ab87d952563 StackSteps.cs %}
