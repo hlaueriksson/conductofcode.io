@@ -2,7 +2,7 @@
 layout: post
 title: Secure and explore ASP.NET Core Web APIs
 date: 2017-03-31 21:00:00
-update: 2017-04-01 20:00:00
+update: 2017-11-02 20:00:00
 tags:
  - JWT
  - Swagger
@@ -162,7 +162,9 @@ Because the API is using JwtBearerAuthentication, we will now get a `401` `Unaut
 
 To fix this we can inject some JavaScript to Swagger UI with Swashbuckle. I was reading [Customize Authentication Header in SwaggerUI using Swashbuckle](http://stevemichelotti.com/customize-authentication-header-in-swaggerui-using-swashbuckle/) by Steve Michelotti before I was able to do this myself.
 
-There are two approaches.
+There are two approaches and two scripts located in the `wwwroot` folder of the project:
+
+![wwwroot](vs-wwwroot.png)
 
 ### authorization1.js
 
