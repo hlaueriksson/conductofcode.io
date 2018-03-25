@@ -9,8 +9,12 @@ image:
  height: 1200
 ---
 
-My name is [Henrik Lau Eriksson](http://henrik.laueriksson.com). I live in Stockholm, Sweden.
+My name is [Henrik Lau Eriksson](http://henrik.laueriksson.com) and I live in Stockholm, Sweden.
 
-I work at [Qliro](https://www.qliro.com) as a developer. I am a programmer with focus on [.NET](https://github.com/dotnet) and the web.
+I'm a programmer with focus on _[.NET](https://www.microsoft.com/net) / ASP.NET / C#_
 
-This blog is one of the tools I intend to use in my journey to become a better programmer. I write about the things I learn along the way.
+I enjoy writing quality code and try my best to practice _TDD / BDD / [Specification by Example](https://gojko.net/books/specification-by-example/)_
+
+_Web / Cloud / [Serverless](https://azure.microsoft.com/en-us/overview/serverless-computing/)_ are some of the things I find interesting
+
+This blog is my tool to become a better developer. I write about the things I learn, the things I find exciting and the things I want my future self to remember.
