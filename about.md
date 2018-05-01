@@ -13,7 +13,9 @@ My name is [Henrik Lau Eriksson](http://henrik.laueriksson.com) and I live in St
 
 I'm a programmer with focus on _[.NET](https://www.microsoft.com/net) / ASP.NET / C#_
 
-I enjoy writing quality code and try my best to practice _TDD / BDD / [Specification by Example](https://gojko.net/books/specification-by-example/)_
+I studied computer science at [KTH Royal Institute of Technology](https://www.kth.se/profile/heer/?l=en)
+
+I enjoy writing quality code and strive to use _TDD / BDD / [Specification by Example](https://gojko.net/books/specification-by-example/)_ when applicable
 
 _Web / Cloud / [Serverless](https://azure.microsoft.com/en-us/overview/serverless-computing/)_ are some of the things I find interesting
 
