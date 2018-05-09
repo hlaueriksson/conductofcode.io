@@ -1,6 +1,6 @@
 ﻿/* TEAM */
 	Henrik Lau Eriksson
-	Contact: http://henrik.laueriksson.com
+	Contact: https://henrik.laueriksson.com
 	Twitter: @hlaueriksson
 
 /* THANKS */

@@ -9,7 +9,7 @@ image:
  height: 1200
 ---
 
-My name is [Henrik Lau Eriksson](http://henrik.laueriksson.com) and I live in Stockholm, Sweden.
+My name is [Henrik Lau Eriksson](https://henrik.laueriksson.com) and I live in Stockholm, Sweden.
 
 I'm a programmer with focus on _[.NET](https://www.microsoft.com/net) / ASP.NET / C#_
 

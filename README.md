@@ -1,2 +1,3 @@
 # conductofcode.io
-The source of http://conductofcode.io/
+
+The source of https://conductofcode.io

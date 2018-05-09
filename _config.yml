@@ -3,13 +3,13 @@ title: Conduct of Code
 email: henrik@laueriksson.com
 description: "Henrik Lau Eriksson on the conduct of code"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://conductofcode.io" # the base hostname & protocol for your site
+url: "https://conductofcode.io" # the base hostname & protocol for your site
 twitter_username: hlaueriksson
 github_username:  hlaueriksson
 
 author: "Henrik Lau Eriksson"
 
-portfolio_url: "http://henrik.laueriksson.com"
+portfolio_url: "https://henrik.laueriksson.com"
 portfolio_text: "henrik.laueriksson.com"
 
 gravatar_url: "https://s.gravatar.com/avatar/27df7a0a062537ef9116a1572707d5e0?s=60"
