@@ -19,6 +19,8 @@ google_analytics_tracking_id: UA-39767110-6
 
 # Build settings
 markdown: kramdown
+theme: minima
+
 timezone: Europe/Stockholm
 permalink: /post/:title/
 
@@ -30,9 +32,6 @@ defaults:
     values:
       is_post: true
 
-gems:
+plugins:
+  - jekyll-feed
   - jekyll-sitemap
-  - jekyll-gist
-
-gist:
-  noscript: true
