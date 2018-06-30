@@ -50,7 +50,7 @@ To get started you need to install:
 * Node.js
 * npm
 
-With Create React App you don’t need a build script or a task manager. No need for Gulp or Grunt any more!
+With Create React App you don’t need a build script or a task manager. No need for Gulp or Grunt anymore!
 
 Here follows the account of what I did to write my "Latest" app...
 

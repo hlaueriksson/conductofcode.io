@@ -46,7 +46,7 @@ I will be using the same subject as in the [previous]({% post_url 2016-07-30-bdd
 
 And I will test the same things as before:
 
-> * Empty vs non empty stack
+> * Empty vs nonempty stack
 > * `Peek()` and `Pop()` methods
 > * `InvalidOperationException`
 

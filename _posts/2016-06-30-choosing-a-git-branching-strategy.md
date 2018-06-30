@@ -95,4 +95,4 @@ Whatever branching strategy you choose I think you should:
 		![Octopus Deploy Dashboard](octopus-deploy-releases.png)
 	* Consider, in addition to the article above, to have the release notes file with the Git commit (SHA-1 hash) exposed
 		![ReleaseNotes.txt](release-notes-txt.png)
-* Consider to use *feature toggles* over long lived feature branches
+* Consider to use *feature toggles* over long-lived feature branches

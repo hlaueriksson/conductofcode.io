@@ -50,7 +50,7 @@ To make Angular 2 development less painful, use the Angular-CLI tool.
 
 Read the docs at: [https://github.com/angular/angular-cli](https://github.com/angular/angular-cli)
 
-With Angular-CLI you don't need a build script or a task manager. No need for Gulp or Grunt any more!
+With Angular-CLI you don't need a build script or a task manager. No need for Gulp or Grunt anymore!
 
 Here follows the account of what I did to write my CV app...
 

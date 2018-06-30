@@ -62,7 +62,7 @@ The clients will depend on public interfaces and the IoC container.
 
 My favorite framework for testing is still [Machine.Specifications](https://github.com/machine/machine.specifications) in combination with [Machine.Fakes](https://github.com/machine/machine.fakes) for automocking support.
 
-At work we use:
+At work, we use:
 
 * [xUnit.net](https://xunit.github.io/)
 * [Moq](https://github.com/moq/moq4)

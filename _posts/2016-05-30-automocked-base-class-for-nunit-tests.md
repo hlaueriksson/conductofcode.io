@@ -17,12 +17,12 @@ Mocking is nice, automocking is even better. How can I make my [NUnit BDD specs]
 
 My favorite framework for testing is [Machine.Specifications](https://github.com/machine/machine.specifications) in combination with [Machine.Fakes](https://github.com/machine/machine.fakes) for automocking support.
 
-At work we use:
+At work, we use:
 
 * [NUnit](http://www.nunit.org/)
 * [Moq](https://github.com/moq/moq4)
 
-Ok, so let's create a base class that works with those conditions...
+Okay, so let's create a base class that works with those conditions...
 
 For inspiration, let's look at the [Machine.Fakes](https://github.com/machine/machine.fakes#withsubjecttsubject) `WithSubject` base class:
 

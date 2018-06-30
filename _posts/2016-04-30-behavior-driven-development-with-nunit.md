@@ -21,12 +21,12 @@ I like `Given`, `When`, `Then` over `Arrange`, `Act`, `Assert`.
 
 I like `Should` instead of `Assert`.
 
-At work we use:
+At work, we use:
 
 * [NUnit](http://www.nunit.org/)
 * [Moq](https://github.com/moq/moq4)
 
-Ok, so how can I make NUnit do *Given, When, Then* and feel more *BDD*? With as little effort as possible? I want to read the result in the test runner in as fluent english as possible. I do not want to write my own framework.
+Okay, so how can I make NUnit do *Given, When, Then* and feel more *BDD*? With as little effort as possible? I want to read the result in the test runner in as fluent English as possible. I do not want to write my own framework.
 
 My solution:
 

@@ -181,7 +181,7 @@ To add Netlify CMS to a Hugo site, two files should be added to the `/static/adm
 {% gist hlaueriksson/2a6a672b2749c7b1785acc5991f5ee20 config.yml %}
 
 * The backend is the GitHub repo
-* The media and public folders suitable for Hugo. Images can be upload directly from the editor.
+* The media and public folders suitable for Hugo. Images can be uploaded directly from the editor.
 * Collections define the structure for content types and how the admin interface in Netlify CMS should work
 * One content type for recipes is configured in this example
 * The `fields` correspond to the `yaml`-formatted front matter in the generated markdown files
@@ -208,7 +208,7 @@ The following files needed to be modified to support the new site and the markdo
 
 {% gist hlaueriksson/2a6a672b2749c7b1785acc5991f5ee20 summary.html %}
 
-* Images can be upload directly from the editor to a dedicated folder in the Git repo
+* Images can be uploaded directly from the editor to a dedicated folder in the Git repo
 * The full URL to the image comes from the front matter
 
 `recipe.html`:

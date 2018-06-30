@@ -25,8 +25,8 @@ You can take a look at a recorded session of his talk [From 0 to DevOps](https:/
 I like the part in the beginning of the video where he talks about his definition:
 
 > DevOps is the union of people, process, and products to enable continuous delivery of value to our end users.
-
--- [Donovan Brown](http://www.donovanbrown.com/post/what-is-devops)
+>
+>-- <cite>[Donovan Brown](http://www.donovanbrown.com/post/what-is-devops)</cite>
 
 Back in 2008/2009 I was using TFS at work. It is nice to see how far Microsoft has come since then.
 
@@ -43,7 +43,7 @@ Back in 2008/2009 I was using TFS at work. It is nice to see how far Microsoft h
 
 You can sign up to VSTS for free and have unlimited private git repositories.
 
-At work I have been using products from different vendors to do the same thing:
+At work, I have been using products from different vendors to do the same thing:
 
 * Jira / Trello / Pivotal Tracker
 * GitHub / Bitbucket / GitLab

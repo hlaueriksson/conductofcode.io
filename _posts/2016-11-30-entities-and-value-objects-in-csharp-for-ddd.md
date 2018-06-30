@@ -16,7 +16,7 @@ Last week I went to a [meetup](https://www.meetup.com/Swenug-Stockholm/events/23
 
 The scope of this post is to focus on constructors, validation and the protection of the domain.
 
-You view the example code in this post at [https://github.com/hlaueriksson/ConductOfCode](https://github.com/hlaueriksson/ConductOfCode)
+You can view the example code in this post at [https://github.com/hlaueriksson/ConductOfCode](https://github.com/hlaueriksson/ConductOfCode)
 
 ## Domain Driven Design
 
@@ -56,12 +56,12 @@ We make sure that created customers are in a *valid state* and are kept in a val
 We make sure to *fail-fast*.
 
 Our customer is immutable, but it doesn't need to be.
-In a real code base the customer class should encapsulate it's own domain logic.
+In a real code base the customer class should encapsulate its own domain logic.
 This makes it is easier to protect the entity from invalid state.
 
 ### Specs
 
-It is nice to be confident of the validation in your entities by test driving the code.
+It is nice to be confident of the validation in your entities by test-driving the code.
 
 {% gist hlaueriksson/61bbc512efaf3ecd9dd6622306843c13 CustomerSpecs.cs %}
 
@@ -112,7 +112,7 @@ It can be very convenient to pass in email as a string to the customer construct
 
 ### Equality Operators
 
-If we are using email as way of identifying customers, than we benefit from:
+If we are using email as way of identifying customers, then we benefit from:
 
 * overriding the `Equals` method
 * implementing  the `IEquatable<T>` interface

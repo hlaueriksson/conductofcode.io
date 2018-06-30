@@ -110,8 +110,8 @@ Sample code:
 * [CommandQuery.Sample.AzureFunctions](https://github.com/hlaueriksson/CommandQuery/tree/master/sample/CommandQuery.Sample.AzureFunctions)
 
 When I was writing the code specific to Azure Functions, I needed to add dependencies.
-It make sense to depend on the same assembly versions as the Azure Functions hosting environment use.
-Therefore I ended up creating a project to gather that information.
+It makes sense to depend on the same assembly versions as the Azure Functions hosting environment use.
+Therefore, I ended up creating a project to gather that information.
 
 ## AzureFunctionsInfo
 
@@ -192,7 +192,7 @@ This is the end result:
 
 `project.json`
 
-> To use NuGet packages in a C# function, upload a *project.json* file to the the function's folder in the function app's file system.
+> To use NuGet packages in a C# function, upload a *project.json* file to the function's folder in the function app's file system.
 
 {% gist hlaueriksson/7ceeded33ebe530c3456a03ba15ee489 project.json %}
 

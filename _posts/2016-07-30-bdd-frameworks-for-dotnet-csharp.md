@@ -56,7 +56,7 @@ The stack, a last-in-first-out (LIFO) collection:
 
 The specifications will test the behavior of:
 
-* Empty vs non empty stack
+* Empty vs nonempty stack
 * `Peek()` and `Pop()` methods
 * `InvalidOperationException`
 
@@ -81,7 +81,7 @@ Console output during test execution:
 {% highlight txt %}
 FEATURE: [LIFO] Stack feature
   In order to support last-in-first-out (LIFO) operations
-  As an developer
+  As a developer
   I want to use a stack
 {% endhighlight %}
 

@@ -12,8 +12,8 @@ image:
  height: 1048
 ---
 
-I was attending a conference six month ago and listened to a talk about [quality](http://swetugg.se/swetugg-2017/speakers/jonas-gauffin#med-fokus-pa-kvalitet).
-During the talk, I was introduced to EARS - Easy Approach to Requirements Syntax.
+I was attending a conference six months ago and listened to a talk about [quality](http://swetugg.se/swetugg-2017/speakers/jonas-gauffin#med-fokus-pa-kvalitet).
+During the talk, I was introduced to EARS — Easy Approach to Requirements Syntax.
 This way of writing requirements struck a chord with me, given my prior experience reading and writing requirement specifications.
 
 When doing agile development, we write *User Stories* and define *Acceptance Criteria*.
@@ -59,7 +59,7 @@ They identified eight major problems with writing requirements in an unstructure
 > * Inappropriate implementation (statements of how the system should be built, rather than what it should do).
 > * Untestability (requirements that cannot be proven true or false when the system is implemented).
 
-To overcome or reduce the effects of these problems they came up with a ruleset with five simple templates.
+To overcome or reduce the effects of these problems they came up with a rule set with five simple templates.
 
 Requirements are divided into five types:
 
@@ -123,7 +123,7 @@ If we were to write requirements with *EARS* templates:
 
 ### Event-driven
 
-> When the method `Push` is invoked, the `Stack<T>` shall inserts the element at the top.
+> When the method `Push` is invoked, the `Stack<T>` shall insert the element at the top.
 
 > When the method `Pop` is invoked, the `Stack<T>` shall remove and return the element at the top.
 
@@ -143,7 +143,7 @@ If we were to write requirements with *EARS* templates:
 
 ### Optional features
 
-> Where instantiated with a specified collection, the `Stack<T>` shall be pre-populated with the elements of the collection.
+> Where instantiated with a specified collection, the `Stack<T>` shall be prepopulated with the elements of the collection.
 
 ## Behavior Driven Development
 
@@ -163,7 +163,7 @@ Maybe this should be called *Requirements by Example*?
 
 ## The BDD Cycle
 
-When implementing the production code, we can use *The BDD Cycle* described in the [The RSpec Book](https://pragprog.com/book/achbd/the-rspec-book).
+When implementing the production code, we can use *The BDD Cycle* described in [The RSpec Book](https://pragprog.com/book/achbd/the-rspec-book).
 
 ![The BDD Cycle](the-bdd-cycle.jpg)
 
