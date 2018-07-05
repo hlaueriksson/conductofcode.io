@@ -20,6 +20,11 @@ twitter:
   username: hlaueriksson
   card: summary
 
+# custom
+portfolio:
+  url: https://henrik.laueriksson.com
+  text: henrik.laueriksson.com
+
 # build settings
 theme: minima
 timezone: Europe/Stockholm
