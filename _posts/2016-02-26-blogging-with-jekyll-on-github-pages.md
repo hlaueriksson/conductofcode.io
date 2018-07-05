@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blogging with Jekyll on GitHub Pages
-date: 2016-02-26 22:00:00
+date: 2016-02-26 21:00:00
 tags:
  - Jekyll
  - GitHub Pages
