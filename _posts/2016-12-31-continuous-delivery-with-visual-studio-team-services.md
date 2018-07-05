@@ -2,7 +2,7 @@
 layout: post
 title: Continuous Delivery with Visual Studio Team Services
 date: 2016-12-31 12:00:00
-update: 2017-01-28 14:00:00
+last_modified_at: 2017-01-28 14:00:00
 tags:
  - Continuous Delivery
  - VSTS

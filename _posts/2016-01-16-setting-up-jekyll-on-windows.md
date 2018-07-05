@@ -2,7 +2,7 @@
 layout: post
 title: Setting up Jekyll on Windows
 date: 2016-01-16 20:50:00
-update: 2018-07-03 20:50:00
+last_modified_at: 2018-07-03 20:50:00
 tags:
  - Jekyll
  - Blogging

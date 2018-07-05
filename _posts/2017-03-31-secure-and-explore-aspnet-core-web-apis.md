@@ -2,7 +2,7 @@
 layout: post
 title: Secure and explore ASP.NET Core Web APIs
 date: 2017-03-31 21:00:00
-update: 2017-11-02 20:00:00
+last_modified_at: 2017-11-02 20:00:00
 tags:
  - JWT
  - Swagger

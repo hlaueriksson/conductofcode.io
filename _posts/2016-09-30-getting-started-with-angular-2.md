@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Angular 2
 date: 2016-09-30 10:00:00
-update: 2016-10-05 14:00:00
+last_modified_at: 2016-10-05 14:00:00
 tags:
  - Angular 2
  - TypeScript

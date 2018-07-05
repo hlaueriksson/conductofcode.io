@@ -2,7 +2,7 @@
 layout: post
 title: Easy Approach to Requirements Syntax and the segue to Behavior Driven Development
 date: 2017-07-31 20:00:00
-update: 2017-08-15 12:00:00
+last_modified_at: 2017-08-15 12:00:00
 tags:
  - Requirements
  - SpecFlow

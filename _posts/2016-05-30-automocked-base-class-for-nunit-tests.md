@@ -2,7 +2,7 @@
 layout: post
 title: Automocked base class for NUnit tests
 date: 2016-05-30 21:00:00
-update: 2016-08-01 23:00:00
+last_modified_at: 2016-08-01 23:00:00
 tags:
  - NUnit
  - Testing
