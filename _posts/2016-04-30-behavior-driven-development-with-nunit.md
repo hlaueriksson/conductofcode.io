@@ -8,7 +8,7 @@ tags:
  - Testing
  - C#
 image:
- path: vs.png
+ path: /post/behavior-driven-development-with-nunit/vs.png
  width: 1920
  height: 1048
 ---

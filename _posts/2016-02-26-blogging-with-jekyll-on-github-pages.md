@@ -7,7 +7,7 @@ tags:
  - GitHub Pages
  - Blogging
 image:
- path: octojekyll.png
+ path: /post/blogging-with-jekyll-on-github-pages/octojekyll.png
  width: 660
  height: 552
 ---

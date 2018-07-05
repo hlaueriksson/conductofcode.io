@@ -8,7 +8,7 @@ tags:
  - Testing
  - C#
 image:
- path: vs.png
+ path: /post/automocked-base-class-for-nunit-tests/vs.png
  width: 1920
  height: 1048
 ---

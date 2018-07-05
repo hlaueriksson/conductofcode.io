@@ -7,7 +7,7 @@ tags:
  - Testing
  - C#
 image:
- path: vs.png
+ path: /post/automocking-and-the-dependency-inversion-principle/vs.png
  width: 1920
  height: 1048
 ---

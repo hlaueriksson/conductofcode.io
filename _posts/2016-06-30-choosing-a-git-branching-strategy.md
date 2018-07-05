@@ -4,7 +4,7 @@ title: Choosing a Git branching strategy
 date: 2016-06-30 19:00:00
 tags: Git
 image:
- path: git.png
+ path: /post/choosing-a-git-branching-strategy/git.png
  width: 1918
  height: 1039
 ---

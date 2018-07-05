@@ -8,7 +8,7 @@ tags:
  - ASP.NET Core
  - C#
 image:
- path: CommandQuery.png
+ path: /post/introducing-commandquery/CommandQuery.png
  width: 1920
  height: 1048
 ---

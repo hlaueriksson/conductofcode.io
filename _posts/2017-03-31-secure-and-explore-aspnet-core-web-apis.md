@@ -9,7 +9,7 @@ tags:
  - Postman
  - C#
 image:
- path: vs.png
+ path: /post/secure-and-explore-aspnet-core-web-apis/vs.png
  width: 1920
  height: 1048
 ---

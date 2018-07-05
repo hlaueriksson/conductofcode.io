@@ -6,7 +6,7 @@ tags:
  - React
  - JavaScript
 image:
- path: visual-studio-code.png
+ path: /post/getting-started-with-react/visual-studio-code.png
  width: 2880
  height: 1800
 ---

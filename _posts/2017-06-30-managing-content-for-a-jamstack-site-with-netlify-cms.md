@@ -6,7 +6,7 @@ tags:
  - Netlify
  - Hugo
 image:
- path: vsc.png
+ path: /post/managing-content-for-a-jamstack-site-with-netlify-cms/vsc.png
  width: 1920
  height: 1040
 ---

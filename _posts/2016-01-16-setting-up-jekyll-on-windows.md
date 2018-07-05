@@ -7,7 +7,7 @@ tags:
  - Jekyll
  - Blogging
 image:
- path: bundle-exec-jekyll-serve.gif
+ path: /post/setting-up-jekyll-on-windows/bundle-exec-jekyll-serve.gif
  width: 979
  height: 512
 ---

@@ -6,7 +6,7 @@ tags:
  - Azure
  - C#
 image:
- path: vsc.png
+ path: /post/serverless-with-azure-functions/vsc.png
  width: 1920
  height: 1040
 ---

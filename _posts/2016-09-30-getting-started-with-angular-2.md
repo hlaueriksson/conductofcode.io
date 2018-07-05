@@ -7,7 +7,7 @@ tags:
  - Angular 2
  - TypeScript
 image:
- path: visual-studio-code.png
+ path: /post/getting-started-with-angular-2/visual-studio-code.png
  width: 2880
  height: 1800
 ---

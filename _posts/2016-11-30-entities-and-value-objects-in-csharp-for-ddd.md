@@ -7,7 +7,7 @@ tags:
  - DDD
  - C#
 image:
- path: vs.png
+ path: /post/entities-and-value-objects-in-csharp-for-ddd/vs.png
  width: 1920
  height: 1048
 ---

@@ -8,7 +8,7 @@ tags:
  - VSTS
  - Azure
 image:
- path: vsts-build-log.png
+ path: /post/continuous-delivery-with-visual-studio-team-services/vsts-build-log.png
  width: 1920
  height: 1048
 ---

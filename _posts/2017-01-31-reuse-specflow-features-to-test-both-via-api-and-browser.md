@@ -7,7 +7,7 @@ tags:
  - Testing
  - C#
 image:
- path: vs.png
+ path: /post/reuse-specflow-features-to-test-both-via-api-and-browser/vs.png
  width: 1920
  height: 1048
 ---

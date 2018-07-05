@@ -7,7 +7,7 @@ tags:
  - Hugo
  - Azure
 image:
- path: vsc.png
+ path: /post/building-a-jamstack-site-with-hugo-and-azure-functions/vsc.png
  width: 1920
  height: 1040
 ---

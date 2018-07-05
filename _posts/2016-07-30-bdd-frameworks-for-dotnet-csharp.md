@@ -8,7 +8,7 @@ tags:
  - Testing
  - C#
 image:
- path: unit-test-sessions.png
+ path: /post/bdd-frameworks-for-dotnet-csharp/unit-test-sessions.png
  width: 1920
  height: 1048
 ---

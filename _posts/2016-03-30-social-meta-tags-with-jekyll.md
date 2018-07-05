@@ -7,7 +7,7 @@ tags:
  - Jekyll
  - Blogging
 image:
- path: meta.png
+ path: /post/social-meta-tags-with-jekyll/meta.png
  width: 1200
  height: 630
 ---

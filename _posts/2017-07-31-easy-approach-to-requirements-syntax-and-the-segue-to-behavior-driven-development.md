@@ -7,7 +7,7 @@ tags:
  - Requirements
  - SpecFlow
 image:
- path: vs.png
+ path: /post/easy-approach-to-requirements-syntax-and-the-segue-to-behavior-driven-development/vs.png
  width: 1920
  height: 1048
 ---
