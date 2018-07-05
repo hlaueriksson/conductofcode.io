@@ -1,37 +1,31 @@
-# Site settings
 title: Conduct of Code
+author: Henrik Lau Eriksson
 email: henrik@laueriksson.com
-description: "Henrik Lau Eriksson on the conduct of code"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://conductofcode.io" # the base hostname & protocol for your site
-twitter_username: hlaueriksson
+description: Henrik Lau Eriksson on the conduct of code
+
+url: "https://conductofcode.io"
+baseurl: ""
+
+lang: en-us
+
+google_analytics: UA-39767110-6
+
+# social links
 github_username:  hlaueriksson
+twitter_username: hlaueriksson
+#linkedin_username: henriklaueriksson
+rss: RSS
 
-author: "Henrik Lau Eriksson"
-
-portfolio_url: "https://henrik.laueriksson.com"
-portfolio_text: "henrik.laueriksson.com"
-
-gravatar_url: "https://s.gravatar.com/avatar/27df7a0a062537ef9116a1572707d5e0?s=60"
-
-# Google Analytics
-google_analytics_tracking_id: UA-39767110-6
-
-# Build settings
-markdown: kramdown
+# build settings
 theme: minima
-
 timezone: Europe/Stockholm
 permalink: /post/:title/
 
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      is_post: true
+minima:
+  date_format: "%d %B %Y"
 
 plugins:
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-seo-tag
   - jekyll-sitemap
