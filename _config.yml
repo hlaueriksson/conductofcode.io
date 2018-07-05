@@ -4,7 +4,6 @@ email: henrik@laueriksson.com
 description: Henrik Lau Eriksson on the conduct of code
 
 url: "https://conductofcode.io"
-baseurl: ""
 
 lang: en-us
 
@@ -15,6 +14,11 @@ github_username:  hlaueriksson
 twitter_username: hlaueriksson
 #linkedin_username: henriklaueriksson
 rss: RSS
+
+# seo
+twitter:
+  username: hlaueriksson
+  card: summary
 
 # build settings
 theme: minima
