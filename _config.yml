@@ -33,6 +33,8 @@ permalink: /post/:title/
 minima:
   date_format: "%d %B %Y"
 
+exclude: [Gemfile, Gemfile.lock, README.md, docker-compose.yml]
+
 plugins:
   - jekyll-feed
   - jekyll-gist
