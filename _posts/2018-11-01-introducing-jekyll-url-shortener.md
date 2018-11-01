@@ -14,6 +14,9 @@ image:
 
 I felt the need to create my own URL Shortener. I ended up with a template repository for making URL Shorteners with Jekyll and GitHub Pages.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Introducing Jekyll URL Shortener - A template repository for making URL Shorteners with <a href="https://twitter.com/hashtag/Jekyll?src=hash&amp;ref_src=twsrc%5Etfw">#Jekyll</a> and <a href="https://twitter.com/hashtag/GitHubPages?src=hash&amp;ref_src=twsrc%5Etfw">#GitHubPages</a><a href="https://t.co/u9iutTiG2O">https://t.co/u9iutTiG2O</a><a href="https://twitter.com/jekyllrb?ref_src=twsrc%5Etfw">@jekyllrb</a> <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a></p>&mdash; Henrik Lau Eriksson (@hlaueriksson) <a href="https://twitter.com/hlaueriksson/status/1058097835206496256?ref_src=twsrc%5Etfw">November 1, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 The source code and documentation can be found here:
 
 * [https://github.com/hlaueriksson/jekyll-url-shortener](https://github.com/hlaueriksson/jekyll-url-shortener)
