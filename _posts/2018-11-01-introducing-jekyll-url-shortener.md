@@ -3,6 +3,7 @@ layout: post
 title: Introducing Jekyll URL Shortener
 description: Building a URL Shortener with Jekyll and GitHub Pages
 date: 2018-11-01 06:00:00
+last_modified_at: 2018-11-29 18:00:00
 tags:
  - Jekyll
  - GitHub Pages
@@ -67,7 +68,7 @@ I modified these settings to fit my needs:
 
 ### 4. Short Links
 
-Short links are created with as Jekyll pages in the root of the repository:
+Short links are created as Jekyll pages in the root of the repository:
 
 {% gist hlaueriksson/0c605458ec7f2a107773484a697f3023 repo.md_ %}
 
