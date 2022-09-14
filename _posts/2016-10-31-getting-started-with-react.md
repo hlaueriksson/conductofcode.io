@@ -2,6 +2,7 @@
 layout: post
 title: Getting started with React
 date: 2016-10-31 13:00:00
+last_modified_at: 2022-09-14 20:00:00
 tags:
  - React
  - JavaScript
@@ -15,7 +16,7 @@ I wanted to write another Single Page Application, this time in React. I made an
 
 Take a look at the result: [http://henrik.laueriksson.com/latest/](http://henrik.laueriksson.com/latest/)
 
-Take a look at the code: [https://github.com/hlaueriksson/latest](https://github.com/hlaueriksson/latest)
+Take a look at the code: [https://github.com/hlaueriksson/latest](https://github.com/hlaueriksson/latest/tree/react)
 
 You can also compare this with the previous post on [Angular 2]({% post_url 2016-09-30-getting-started-with-angular-2 %}).
 
@@ -103,7 +104,7 @@ The API provides convenient queries for the React app to get my latest:
 
 Take a look at the code: [https://github.com/hlaueriksson/latest-api](https://github.com/hlaueriksson/latest-api)
 
-The API is hosted on Azure: [http://hlaueriksson-latest-api.azurewebsites.net/api/query/](http://hlaueriksson-latest-api.azurewebsites.net/api/query/)
+The API was hosted on Azure: ~~`http://hlaueriksson-latest-api.azurewebsites.net/api/query/`~~
 
 Random thoughts:
 

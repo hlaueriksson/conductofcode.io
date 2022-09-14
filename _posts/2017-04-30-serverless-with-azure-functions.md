@@ -2,6 +2,7 @@
 layout: post
 title: Serverless with Azure Functions
 date: 2017-04-30 10:00:00
+last_modified_at: 2022-09-14 20:00:00
 tags:
  - Azure
  - C#
@@ -103,11 +104,11 @@ To get more information about the project, read the documentation over at the Gi
 
 Get started:
 
-* [CommandQuery.AzureFunctions](https://github.com/hlaueriksson/CommandQuery#commandqueryazurefunctions)
+* [CommandQuery.AzureFunctions](https://github.com/hlaueriksson/CommandQuery/blob/master/CommandQuery.AzureFunctions.md)
 
 Sample code:
 
-* [CommandQuery.Sample.AzureFunctions](https://github.com/hlaueriksson/CommandQuery/tree/master/sample/CommandQuery.Sample.AzureFunctions)
+* [samples](https://github.com/hlaueriksson/CommandQuery/tree/master/samples)
 
 When I was writing the code specific to Azure Functions, I needed to add dependencies.
 It makes sense to depend on the same assembly versions as the Azure Functions hosting environment use.
@@ -207,7 +208,7 @@ This is the end result:
 ![bin](latest-functions-query-bin.png)
 
 * The queries and query handlers used in this function are located in `Latest.dll`
-* Code: [Latest](https://github.com/hlaueriksson/latest-functions/tree/master/Latest)
+* Code: [Latest](https://github.com/hlaueriksson/latest-functions/tree/v1.0/src/Latest)
 
 Make sure that private assemblies are built with `<TargetFramework>net46</TargetFramework>`.
 
@@ -236,7 +237,7 @@ The end result of all this can be viewed at:
 
 The code for the SPA that uses the function:
 
-* [https://github.com/hlaueriksson/latest](https://github.com/hlaueriksson/latest)
+* [https://github.com/hlaueriksson/latest](https://github.com/hlaueriksson/latest/tree/react)
 
 ## Testing
 
@@ -287,6 +288,6 @@ If you are using `CommandQuery` together with Azure Functions you can unit test 
 
 For example like this:
 
-* [Latest.Specs/Queries](https://github.com/hlaueriksson/latest-functions/tree/master/Latest/Latest.Specs/Queries)
+* [Latest.Specs/Queries](https://github.com/hlaueriksson/latest-functions/tree/v1.0/src/Latest/Latest.Specs/Queries)
 
 *(Yeah, I know! Not really unit testing, but you get the point)*

@@ -2,7 +2,7 @@
 layout: post
 title: Continuous Delivery with Visual Studio Team Services
 date: 2016-12-31 12:00:00
-last_modified_at: 2017-01-28 14:00:00
+last_modified_at: 2022-09-14 20:00:00
 tags:
  - Continuous Delivery
  - VSTS
@@ -18,9 +18,9 @@ Two weeks ago I went to a [meetup](https://www.meetup.com/swedish-ms-alm-devops/
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Continuous Delivery for DevOps presented by <a href="https://twitter.com/DonovanBrown">@DonovanBrown</a> <a href="https://t.co/vdnCI7Er1R">pic.twitter.com/vdnCI7Er1R</a></p>&mdash; Henrik Lau Eriksson (@hlaueriksson) <a href="https://twitter.com/hlaueriksson/status/809498672815833088">December 15, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-You can take a look at a recorded session of his talk [From 0 to DevOps](https://channel9.msdn.com/Events/Ignite/New-Zealand-2016/M328) on Channel 9:
+You can take a look at a recorded session of his talk [From 0 to DevOps](https://docs.microsoft.com/en-us/events/microsoft-techncial-summit-technical-summit-2016/keynote-donovan-brown-from-0-to-devops):
 
-<iframe src="https://channel9.msdn.com/Events/Ignite/New-Zealand-2016/M328/player" width="560" height="315" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://docs.microsoft.com/video/media/d5d7895f-091e-4651-aece-dcdb744b2606/day2keynotedonovanbrown_high.mp4" allowFullScreen frameBorder="0"></iframe>
 
 I like the part in the beginning of the video where he talks about his definition:
 
