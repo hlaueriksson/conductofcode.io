@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Angular 2
 date: 2016-09-30 10:00:00
-last_modified_at: 2016-10-05 14:00:00
+last_modified_at: 2022-09-24 07:00:00
 tags:
  - Angular 2
  - TypeScript
@@ -16,7 +16,7 @@ I needed to update my resume, maintenance was long overdue. I decided to make an
 
 Take a look at the result: [http://henrik.laueriksson.com/cv/](http://henrik.laueriksson.com/cv/)
 
-Take a look at the code: [https://github.com/hlaueriksson/cv](https://github.com/hlaueriksson/cv) 
+Take a look at the code: [https://github.com/hlaueriksson/cv](https://github.com/hlaueriksson/cv/tree/angular)
 
 N.B. The CV is in Swedish.
 
@@ -32,8 +32,6 @@ To get started you need to install:
 * npm
 
 I'm writing this on a Mac, so installing the prerequisites was easy.
-
-(On a side note, installing Jekyll on Mac OS X was also way easier than on [Windows]({% post_url 2016-01-16-setting-up-jekyll-on-windows %}))
 
 Angular 2 apps consists of:
 
