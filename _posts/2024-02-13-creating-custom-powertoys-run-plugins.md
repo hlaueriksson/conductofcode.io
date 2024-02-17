@@ -3,14 +3,15 @@ layout: post
 title: Creating custom PowerToys Run plugins
 description: A step by step guide on how to create community plugins for PowerToys Run
 date: 2024-02-13 22:00:00
+last_modified_at: 2024-02-17 21:00:00
 tags:
  - PowerToys
  - Plugins
  - C#
 image:
  path: /post/creating-custom-powertoys-run-plugins/vs.png
- width: 1600
- height: 1200
+ width: 1920
+ height: 1020
 ---
 
 PowerToys Run is a quick launcher for Windows. It is open-source and modular for additional plugins.
@@ -22,7 +23,7 @@ Official plugins include:
 - Value Generator
 - Windows Search
 
-At the time of writing there are 21 plugins out of the box.
+At the time of writing there are 20 plugins out of the box.
 
 If you think the official plugins are not enough, you can write our own.
 The easiest way to get started is to look at what others did.
@@ -35,13 +36,49 @@ The easiest way to get started is to look at what others did.
 
 Browsing through some of the GitHub repos found above, gives you an idea of how the source code of a plugin looks like.
 
-If you want to look under the hood, fork or clone the PowerToys repo:
+## Contents<!-- omit in toc -->
 
-- <https://github.com/microsoft/PowerToys>
+- [Demo Plugin](#demo-plugin)
+- [Project](#project)
+- [Metadata](#metadata)
+- [Main](#main)
+- [Interfaces](#interfaces)
+  - [IPlugin](#iplugin)
+  - [IPluginI18n](#iplugini18n)
+  - [IDelayedExecutionPlugin](#idelayedexecutionplugin)
+  - [IContextMenu](#icontextmenu)
+  - [ISettingProvider](#isettingprovider)
+- [Classes](#classes)
+  - [PluginInitContext](#plugininitcontext)
+  - [Query](#query)
+  - [Result](#result)
+  - [ContextMenuResult](#contextmenuresult)
+- [Actions](#actions)
+- [Logging](#logging)
+- [Dependencies](#dependencies)
+- [Tests](#tests)
+- [Distribution](#distribution)
+- [Resources](#resources)
 
-Get the solution to build on your machine with the help of the documentation:
+## Demo Plugin
 
-- [Compiling PowerToys](https://github.com/microsoft/PowerToys/tree/main/doc/devdocs#compiling-powertoys)
+As a demo, I created a simple plugin that counts the words and characters of the query.
+
+![Demo Plugin](demo-plugin.png)
+
+- ActionKeyword: `demo`
+
+Settings:
+
+![Demo Settings](demo-settings.png)
+
+- Count spaces: `true` \| `false`
+
+The source code:
+
+- <https://github.com/hlaueriksson/ConductOfCode/tree/master/PowerToysRun>
+
+Throughout this blog post, the demo plugin will be used as an example.
 
 ## Project
 
@@ -49,70 +86,37 @@ Before you create your own project, first take a look at the official checklist:
 
 - [New plugin checklist](https://github.com/microsoft/PowerToys/blob/main/doc/devdocs/modules/launcher/new-plugin-checklist.md)
 
-Key takeaways for the checklist:
+Key takeaways from the checklist:
 
 - Project name: `Community.PowerToys.Run.Plugin.<PluginName>`
 - Target framework: `net8.0-windows`
 - Create a `Main.cs` class
 - Create a `plugin.json` file
 
-After you create a new project, edit the `.csproj` file to look something like this:
+In Visual Studio, create a new [Class Library](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio) project.
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+The edit the `.csproj` file to look something like this:
 
-  <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <Platforms>x64;ARM64</Platforms>
-    <PlatformTarget>$(Platform)</PlatformTarget>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
-
-  <ItemGroup Condition="'$(Platform)' == 'x64'">
-    <Reference Include="..\libs\x64\PowerToys.Common.UI.dll" />
-    <Reference Include="..\libs\x64\PowerToys.ManagedCommon.dll" />
-    <Reference Include="..\libs\x64\PowerToys.Settings.UI.Lib.dll" />
-    <Reference Include="..\libs\x64\Wox.Infrastructure.dll" />
-    <Reference Include="..\libs\x64\Wox.Plugin.dll" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(Platform)' == 'ARM64'">
-    <Reference Include="..\libs\ARM64\PowerToys.Common.UI.dll" />
-    <Reference Include="..\libs\ARM64\PowerToys.ManagedCommon.dll" />
-    <Reference Include="..\libs\ARM64\PowerToys.Settings.UI.Lib.dll" />
-    <Reference Include="..\libs\ARM64\Wox.Infrastructure.dll" />
-    <Reference Include="..\libs\ARM64\Wox.Plugin.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="plugin.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Images\*.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-</Project>
-```
+{% gist hlaueriksson/5484a19def85f618d7a2297628486c80 Community.PowerToys.Run.Plugin.Demo.csproj %}
 
 - Platforms: `x64` and `ARM64`
-- Dependencies: PowerToys and Wox `.dll` binaries
+- `UseWPF` to include references to WPF assemblies
+- Dependencies: PowerToys and Wox `.dll` assemblies
 
 The `.dll` files referenced in the `.csproj` file are examples of dependencies needed, depending on what features your plugin should support.
 
 Unfortunately, these assemblies do not exist as packages on NuGet.
 
-I like to commit these `.dll` files to the repo in a `libs` folder.
+Therefore I like to commit these `.dll` files to the repo in a `libs` folder.
 
-I'll copy the `x64` versions of the `.dll` files from installation location:
+I'll copy the `x64` versions of the `.dll` files from the installation location:
 
 - `C:\Program Files\PowerToys\`
   - Machine wide installation of PowerToys
 - `%LocalAppData%\PowerToys\`
   - Per user installation of PowerToys
 
-In the case of `ARM64` versions of the `.dll` files, I'll build them from source.
+In the case of the `ARM64` versions of the `.dll` files, I'll build them from source.
 I don't own an `ARM64` machine to install PowerToys on.
 
 Other people like to resolve the dependencies by referencing the PowerToys projects directly.
@@ -123,24 +127,42 @@ Like the approach by Lin Yu-Chieh (Victor):
 The project should start out with these files:
 
 - `Images\*.png`
-  - typically dark and light versions of icons
+  - Typically dark and light versions of icons
 - `Main.cs`
-  - the starting point of the plugin logic
+  - The starting point of the plugin logic
 - `plugin.json`
-  - the plugin manifest
+  - The plugin metadata
+
+## Metadata
+
+Create a `plugin.json` file that looks something like this:
+
+{% gist hlaueriksson/5484a19def85f618d7a2297628486c80 plugin.json %}
+
+The format is described in the Dev Documentation:
+
+- [New plugin checklist](https://github.com/microsoft/PowerToys/blob/main/doc/devdocs/modules/launcher/new-plugin-checklist.md)
 
 ## Main
+
+Create a `Main.cs` file that looks something like this:
+
+{% gist hlaueriksson/5484a19def85f618d7a2297628486c80 Main.cs %}
 
 The `Main` class must have a public, static string property named `PluginID`:
 
 ```cs
-public static string PluginID => "0B47DD2677CD41E9927218E9D67EFAD1";
+public static string PluginID => "AE953C974C2241878F282EA18A7769E4";
 ```
 
 - 32 digits `Guid` without hyphens
 - Must match the value in the `plugin.json` file
 
 In addition, the `Main` class should implement a few interfaces.
+
+Let's break down the implemented *interfaces* and the *classes* used in the example above.
+
+## Interfaces
 
 Some interfaces of interest from the `Wox.Plugin` assembly:
 
@@ -149,13 +171,6 @@ Some interfaces of interest from the `Wox.Plugin` assembly:
 - `IDelayedExecutionPlugin`
 - `IContextMenu`
 - `ISettingProvider`
-
-Some classes of interest from the `Wox.Plugin` assembly:
-
-- `PluginInitContext`
-- `Query`
-- `Result`
-- `ContextMenuResult`
 
 ### IPlugin
 
@@ -175,7 +190,8 @@ public interface IPlugin
 ```
 
 - `Query` is the method that does the actual logic in the plugin
-- `Init` is used to initialize the plugin and complements a constructor
+- `Init` is used to initialize the plugin
+  - Save a reference to the `PluginInitContext` for later use
 - `Name` ought to match the value in the `plugin.json` file, but can be localized
 
 ### IPluginI18n
@@ -244,6 +260,15 @@ public interface ISettingProvider
 - `AdditionalOptions` is invoked when the PowerToys GUI displays the settings
   - Use this property to define how the custom settings are renderer in the PowerToys GUI
 
+## Classes
+
+Some classes of interest from the `Wox.Plugin` assembly:
+
+- `PluginInitContext`
+- `Query`
+- `Result`
+- `ContextMenuResult`
+
 ### PluginInitContext
 
 A `PluginInitContext` instance is passed as argument to the `Init` method:
@@ -257,7 +282,6 @@ public class PluginInitContext
 }
 ```
 
-- Store the context in a member in the plugin for later use
 - `PluginMetadata` can be useful if you need the path to the `PluginDirectory` or the `ActionKeyword` of the plugin
 - `IPublicAPI` is mainly used to `GetCurrentTheme`, but can also `ShowMsg`, `ShowNotification` or `ChangeQuery`
 
@@ -279,7 +303,7 @@ Example of how to create a new result:
 ```cs
 new Result
 {
-    QueryTextDisplay = "An optional text that are displayed where the user types queries", // usually a command of some sort (if needed)
+    QueryTextDisplay = query.Search, // displayed where the user types queries
     IcoPath = IconPath, // displayed on the left side
     Title = "A title displayed in the top of the result",
     SubTitle = "A subtitle displayed under the main title",
@@ -331,7 +355,7 @@ Find the perfect `Glyph` to use from:
 - [Segoe Fluent Icons font](https://learn.microsoft.com/en-us/windows/apps/design/style/segoe-fluent-icons-font)
 - [Segoe MDL2 Assets icons](https://learn.microsoft.com/en-us/windows/apps/design/style/segoe-ui-symbol-font)
 
-## Action
+## Actions
 
 Examples of actions to use with `Result` or `ContextMenuResult`:
 
@@ -361,14 +385,14 @@ Action = _ =>
 
 ## Logging
 
-Logging is done with the static `Log` class.
+Logging is done with the static `Log` class, from the `Wox.Plugin.Logger` namespace.
 Under the hood, `NLog` is used.
 
 Five log levels:
 
 ```cs
 Log.Debug("A debug message", GetType());
-Log.Info("An info message", GetType());
+Log.Info("An information message", GetType());
 Log.Warn("A warning message", GetType());
 Log.Error("An error message", GetType());
 Log.Exception("An exceptional message", new Exception(), GetType());
@@ -391,7 +415,7 @@ Packages of interest:
 - `LazyCache`
 - `Newtonsoft.Json`
 
-If the plugin uses any third party dependencies that are not referenced by PowerToys you need to enable `DynamicLoading`.
+If the plugin uses any third party dependencies that are not referenced by PowerToys Run, you need to enable `DynamicLoading`.
 
 In the `plugin.json` file:
 
@@ -414,49 +438,22 @@ The official plugins use the [MSTest](https://github.com/microsoft/testfx) frame
 
 The `.csproj` file of a unit test project may look something like this:
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="Moq" Version="4.20.70" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
-    <PackageReference Include="NLog" Version="5.0.4" />
-    <PackageReference Include="System.IO.Abstractions" Version="17.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Community.PowerToys.Run.Plugin.Demo\Community.PowerToys.Run.Plugin.Demo.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(Platform)' == 'x64'">
-    <Reference Include="..\libs\x64\Wox.Plugin.dll" />
-    <Reference Include="..\libs\x64\PowerToys.Settings.UI.Lib.dll" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(Platform)' == 'ARM64'">
-    <Reference Include="..\libs\ARM64\Wox.Plugin.dll" />
-    <Reference Include="..\libs\ARM64\PowerToys.Settings.UI.Lib.dll" />
-  </ItemGroup>
-
-</Project>
-```
+{% gist hlaueriksson/5484a19def85f618d7a2297628486c80 Community.PowerToys.Run.Plugin.Demo.UnitTests.csproj %}
 
 - Apart from the actual test assemblies, some package references are also needed
-- As well as references to PowerToys and Wox `.dll` binaries
+- As well as references to PowerToys and Wox `.dll` assemblies
 
-Some of the official plugins has unit test coverage:
+Unit tests of the `Main` class may look something like this:
+
+{% gist hlaueriksson/5484a19def85f618d7a2297628486c80 MainTests.cs %}
+
+Some of the official plugins have unit test coverage:
 
 - <https://github.com/microsoft/PowerToys/tree/main/src/modules/launcher/Plugins>
 
 ## Distribution
 
-Unfortunately there is no plugin manager in PowerToys that can be used to download new plugins.
+Unfortunately, the plugin manager in PowerToys Run does not offer support for downloading new plugins.
 
 Community plugins are traditionally packaged in `.zip` files and distributed via releases in GitHub repositories.
 
@@ -473,6 +470,10 @@ The `Everything` plugin by Lin Yu-Chieh (Victor) is next level and is [distribut
 
 ## Resources
 
+Demo Plugin:
+
+- <https://github.com/hlaueriksson/ConductOfCode/tree/master/PowerToysRun>
+
 Awesome PowerToys Run Plugins:
 
 - <https://github.com/hlaueriksson/awesome-powertoys-run-plugins>
@@ -480,3 +481,23 @@ Awesome PowerToys Run Plugins:
 Third-Party plugins for PowerToy Run:
 
 - <https://github.com/microsoft/PowerToys/blob/main/doc/thirdPartyRunPlugins.md>
+
+Unofficial Visual Studio project template for PowerToys Run plugins:
+
+- <https://github.com/8LWXpg/PowerToysRun-PluginTemplate>
+
+Documentation:
+
+- <https://learn.microsoft.com/en-us/windows/powertoys/run>
+
+Dev Documentation:
+
+- <https://github.com/microsoft/PowerToys/tree/main/doc/devdocs/modules/launcher>
+
+If you want to look under the hood, fork or clone the PowerToys repo:
+
+- <https://github.com/microsoft/PowerToys>
+
+Get the solution to build on your machine with the help of the documentation:
+
+- [Compiling PowerToys](https://github.com/microsoft/PowerToys/tree/main/doc/devdocs#compiling-powertoys)
