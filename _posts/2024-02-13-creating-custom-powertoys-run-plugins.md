@@ -3,7 +3,7 @@ layout: post
 title: Creating custom PowerToys Run plugins
 description: A step by step guide on how to create community plugins for PowerToys Run
 date: 2024-02-13 22:00:00
-last_modified_at: 2024-02-17 21:00:00
+last_modified_at: 2024-09-22 12:00:00
 tags:
  - PowerToys
  - Plugins
@@ -23,15 +23,14 @@ Official plugins include:
 - Value Generator
 - Windows Search
 
-At the time of writing there are 20 plugins out of the box.
+At the time of writing, there are 20 plugins out of the box.
 
 If you think the official plugins are not enough, you can write our own.
 The easiest way to get started is to look at what others did.
 
 - Official plugins:
   - <https://github.com/microsoft/PowerToys/tree/main/src/modules/launcher/Plugins>
-- GitHub topics with potentially interesting repos:
-  - [powertoys-run](https://github.com/topics/powertoys-run)
+- GitHub topic with potentially interesting repos:
   - [powertoys-run-plugin](https://github.com/topics/powertoys-run-plugin)
 
 Browsing through some of the GitHub repos found above, gives you an idea of how the source code of a plugin looks like.
@@ -58,6 +57,7 @@ Browsing through some of the GitHub repos found above, gives you an idea of how 
 - [Dependencies](#dependencies)
 - [Tests](#tests)
 - [Distribution](#distribution)
+- [Linting](#linting)
 - [Resources](#resources)
 
 ## Demo Plugin
@@ -105,25 +105,42 @@ The edit the `.csproj` file to look something like this:
 
 The `.dll` files referenced in the `.csproj` file are examples of dependencies needed, depending on what features your plugin should support.
 
-Unfortunately, these assemblies do not exist as packages on NuGet.
+Unfortunately, there are no official NuGet packages for these assemblies.
 
-Therefore I like to commit these `.dll` files to the repo in a `libs` folder.
+Traditionally, plugin authors commit these `.dll` files to the repo in a `libs` folder.
+Both the `x64` and `ARM64` versions.
 
-I'll copy the `x64` versions of the `.dll` files from the installation location:
+You can copy the DLLs for your platform architecture from the installation location:
 
 - `C:\Program Files\PowerToys\`
   - Machine wide installation of PowerToys
 - `%LocalAppData%\PowerToys\`
   - Per user installation of PowerToys
 
-In the case of the `ARM64` versions of the `.dll` files, I'll build them from source.
-I don't own an `ARM64` machine to install PowerToys on.
+You can build the DLLs for the other platform architecture from source:
 
-Other people like to resolve the dependencies by referencing the PowerToys projects directly.
+- [Compiling PowerToys](https://github.com/microsoft/PowerToys/tree/main/doc/devdocs#compiling-powertoys)
+
+Other plugin authors like to resolve the dependencies by referencing the PowerToys projects directly.
 Like the approach by Lin Yu-Chieh (Victor):
 
 - [EverythingPowerToys](https://github.com/lin-ycv/EverythingPowerToys/wiki)
 
+I have created a NuGet package that simplifies referencing all PowerToys Run plugin dependencies:
+
+- <https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies>
+
+When using `Community.PowerToys.Run.Plugin.Dependencies` the `.csproj` file can look like this:
+
+{% gist hlaueriksson/5484a19def85f618d7a2297628486c80 Community.PowerToys.Run.Plugin.Demo.Dependencies.csproj %}
+
+I have also created `dotnet new` templates that simplifies creating PowerToys Run plugin projects and solutions:
+
+- <https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Templates>
+
+![dotnet new list PowerToys](dotnet-new-templates.png)
+
+Anyway, it doesn't matter if you create a project via templates or manually.
 The project should start out with these files:
 
 - `Images\*.png`
@@ -413,7 +430,7 @@ NuGet packages and the versions specified in the `.props` file are candidates to
 Packages of interest:
 
 - `LazyCache`
-- `Newtonsoft.Json`
+- `System.Text.Json`
 
 If the plugin uses any third party dependencies that are not referenced by PowerToys Run, you need to enable `DynamicLoading`.
 
@@ -468,6 +485,18 @@ The `Everything` plugin by Lin Yu-Chieh (Victor) is next level and is [distribut
 - WinGet
 - Chocolatey
 
+## Linting
+
+I have created a linter for PowerToys Run community plugins:
+
+- <https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Lint>
+
+![ptrun-lint](ptrun-lint.png)
+
+When running the linter on your plugin any issues are reported with a code and a description.
+If nothing shows up, your plugin is awesome.
+The lint rules are codified from the guidelines in the [Community plugin checklist](https://github.com/hlaueriksson/awesome-powertoys-run-plugins/blob/main/checklist.md).
+
 ## Resources
 
 Demo Plugin:
@@ -482,9 +511,9 @@ Third-Party plugins for PowerToy Run:
 
 - <https://github.com/microsoft/PowerToys/blob/main/doc/thirdPartyRunPlugins.md>
 
-Unofficial Visual Studio project template for PowerToys Run plugins:
+`dotnet new` templates for community plugins:
 
-- <https://github.com/8LWXpg/PowerToysRun-PluginTemplate>
+- <https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Templates>
 
 Documentation:
 
