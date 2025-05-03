@@ -2,6 +2,7 @@
 layout: post
 title: Choosing a Git branching strategy
 date: 2016-06-30 19:00:00
+last_modified_at: 2018-07-06 21:00:00
 tags: Git
 image:
  path: /post/choosing-a-git-branching-strategy/git.png
